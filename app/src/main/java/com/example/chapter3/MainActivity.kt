@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         val btnMainImplicitIntent = findViewById<Button>(R.id.btnMainImplicitIntent)
         val btnMainPassing = findViewById<Button>(R.id.btnMainPassing)
         val btnMainFragment = findViewById<Button>(R.id.btnMainFragment)
+        val btnMainRecycleView = findViewById<Button>(R.id.btnMainRecycleView)
 
         btnMainIntent.setOnClickListener {
             Intent(this, IntentSatu::class.java).also {
@@ -35,6 +36,12 @@ class MainActivity : AppCompatActivity() {
 
         btnMainFragment.setOnClickListener {
             Intent(this, Fragment::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        btnMainRecycleView.setOnClickListener {
+            Intent(this, RecyclerView::class.java).also {
                 startActivity(it)
             }
         }

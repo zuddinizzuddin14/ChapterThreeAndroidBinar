@@ -55,4 +55,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMainPassing"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/btnMainRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="RECYCLE VIEW"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMainFragment"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

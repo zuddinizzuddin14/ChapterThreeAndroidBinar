@@ -2,4 +2,7 @@
     <string name="app_name">Chapter3</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Nama</string>
+    <string name="desc">Deskripsi</string>
+    <string name="nomor">Nomor Handphone</string>
 </resources>
