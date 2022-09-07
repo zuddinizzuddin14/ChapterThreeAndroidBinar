@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentPertama">
+
+    <fragment
+        android:id="@+id/fragmentPertama"
+        android:name="com.example.chapter3.FragmentPertama"
+        android:label="fragment_pertama"
+        tools:layout="@layout/fragment_pertama">
+        <action
+            android:id="@+id/action_fragmentPertama_to_fragmentKedua"
+            app:destination="@id/fragmentKedua" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="chaptertiga.com/fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKedua"
+        android:name="com.example.chapter3.FragmentKedua"
+        android:label="fragment_kedua"
+        tools:layout="@layout/fragment_kedua">
+        <action
+            android:id="@+id/action_fragmentKedua_to_fragmentKetiga"
+            app:destination="@id/fragmentKetiga" />
+        <deepLink
+            android:id="@+id/deepLink2"
+            app:uri="chaptertiga.com/fragment/fragmentkedua" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentKetiga"
+        android:name="com.example.chapter3.FragmentKetiga"
+        android:label="fragment_ketiga"
+        tools:layout="@layout/fragment_ketiga">
+        <argument
+            android:name="name"
+            android:defaultValue="Nama Kosong"
+            app:argType="string"
+            app:nullable="true" />
+        <deepLink
+            android:id="@+id/deepLink3"
+            app:uri="chaptertiga.com/fragment/fragmentkedua/fragmentketiga/{name}" />
+    </fragment>
+</navigation>
